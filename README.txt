@@ -1,11 +1,10 @@
 ISMLAR MA’NOSI SAYTI
 
-1) Sayt statik: admin panel yo‘q.
-2) Asosiy fayl: index.html
-3) Ma’lumotlar: assets/js/names-data.js va ismlar sahifalari.
-4) Hostingga yuklash: barcha fayl va papkalarni public_html ichiga tashlang.
-5) Google AdSense uchun reklama joylari HTML ichida "Google AdSense kodi uchun joy" deb belgilangan.
-6) sitemap.xml, robots.txt, privacy/contact/about sahifalari qo‘shilgan.
-7) Domeningizni olgandan keyin sitemap.xml va HTML canonical ichidagi https://example.uz manzilini o‘z domeningizga almashtiring.
+Tayyor statik sayt. Ishga tushirish uchun index.html faylini brauzerda oching yoki hostingga papka holida yuklang.
 
-Eslatma: ko‘p ism qo‘shilganda individual SEO sahifalarini ham avtomatik generatsiya qilish tavsiya etiladi.
+Tuzatilgan joylar:
+- Dizayn rasmga yaqinlashtirildi.
+- Qidiruv tizimi ishlaydi.
+- Ism ustiga bosilganda ma’nosi alohida sahifada ochiladi.
+- O‘ng va pastki reklama joylari qo‘yildi.
+- Sayt haqida, aloqa, maxfiylik va foydalanish shartlari sahifalari qo‘shildi.

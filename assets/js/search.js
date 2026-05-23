@@ -1,29 +1,30 @@
 (function(){
   const DATA = window.NAMES_DATA || [];
+  const base = (document.body && document.body.dataset.base) || '';
 
-  function basePrefix(){
-    const script = document.querySelector('script[src$="assets/js/search.js"], script[src$="search.js"]');
-    const src = script ? script.getAttribute('src') : '';
-    return src.replace(/assets\/js\/search\.js$/, '').replace(/search\.js$/, '');
+  function cleanUrl(url){
+    let u = String(url || '').replace(/^\/+/, '');
+    if(!u) return 'index.html';
+    if(u.endsWith('/')) u += 'index.html';
+    return u;
   }
-
-  function localHref(url){
-    if(!url) return '#';
-    const clean = url.replace(/^\/+/, '');
-    return basePrefix() + clean + (clean.endsWith('/') ? 'index.html' : '');
-  }
-
+  function href(url){ return base + cleanUrl(url); }
   function norm(s){
-    return (s || '')
-      .toString()
+    return String(s || '')
       .toLowerCase()
-      .replace(/o[‘’ʻ']/g,'o')
+      .replace(/ё/g,'yo')
+      .replace(/ў/g,'o')
+      .replace(/ғ/g,'g')
+      .replace(/қ/g,'q')
+      .replace(/ҳ/g,'h')
+      .replace(/о[‘’ʻ']/g,'o')
+      .replace(/ғ/g,'g')
       .replace(/g[‘’ʻ']/g,'g')
-      .replace(/[‘’ʻ']/g,'')
+      .replace(/[‘’ʻ'`]/g,'')
+      .replace(/\s+/g,' ')
       .trim();
   }
-
-  function filteredData(input){
+  function scopedItems(input){
     const group = input.dataset.group || '';
     const religious = input.dataset.religious || '';
     return DATA.filter(item => {
@@ -33,73 +34,50 @@
       return true;
     });
   }
-
-  function renderResults(input){
-    const targetId = input.dataset.target || 'searchResults';
-    const box = document.getElementById(targetId);
-    if(!box) return [];
-
-    const query = norm(input.value);
-    box.innerHTML = '';
-    if(query.length < 1){
-      showAllNameLinks();
-      return [];
-    }
-
-    const items = filteredData(input)
-      .filter(x => norm(x.name).includes(query) || norm(x.meaning).includes(query))
-      .slice(0, 20);
-
-    if(!items.length){
-      box.innerHTML = '<div class="empty">Mos ism topilmadi.</div>';
-      filterVisibleNameLinks(query);
-      return [];
-    }
-
-    box.innerHTML = items.map(x =>
-      `<a class="result-item" href="${localHref(x.url)}"><b>${x.name}</b><span>${x.meaning}</span></a>`
-    ).join('');
-    filterVisibleNameLinks(query);
-    return items;
-  }
-
-  function showAllNameLinks(){
-    document.querySelectorAll('.name-link').forEach(link => link.classList.remove('hidden-by-search'));
-  }
-
-  function filterVisibleNameLinks(query){
+  function filterLinks(query){
     const links = document.querySelectorAll('.name-link');
     if(!links.length) return;
     links.forEach(link => {
-      const text = norm(link.textContent);
-      link.classList.toggle('hidden-by-search', !text.includes(query));
+      link.classList.toggle('hidden-by-search', query && !norm(link.textContent).includes(query));
     });
   }
-
-  function bindSearch(input){
-    ['input','keyup','search','change'].forEach(evt => {
-      input.addEventListener(evt, () => renderResults(input));
-    });
-    input.addEventListener('keydown', e => {
-      if(e.key === 'Enter'){
-        const items = renderResults(input);
-        if(items.length){
+  function render(input){
+    const target = document.getElementById(input.dataset.target || 'searchResults');
+    if(!target) return [];
+    const q = norm(input.value);
+    target.innerHTML = '';
+    filterLinks(q);
+    if(!q) return [];
+    const items = scopedItems(input).filter(item =>
+      norm(item.name).includes(q) || norm(item.meaning).includes(q) || norm(item.slug).includes(q)
+    ).slice(0, 12);
+    if(!items.length){
+      target.innerHTML = '<div class="empty">Mos ism topilmadi.</div>';
+      return [];
+    }
+    target.innerHTML = items.map(item =>
+      '<a class="result-item" href="'+href(item.url)+'"><b>'+escapeHtml(item.name)+'</b><span>'+escapeHtml(item.meaning)+'</span></a>'
+    ).join('');
+    return items;
+  }
+  function escapeHtml(s){
+    return String(s).replace(/[&<>"]/g, ch => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[ch]));
+  }
+  document.addEventListener('DOMContentLoaded', function(){
+    const inputs = Array.from(document.querySelectorAll('[data-search]'));
+    inputs.forEach(input => {
+      ['input','keyup','search','change'].forEach(evt => input.addEventListener(evt, () => render(input)));
+      const form = input.closest('form');
+      if(form){
+        form.addEventListener('submit', function(e){
           e.preventDefault();
-          window.location.href = localHref(items[0].url);
-        }
+          const items = render(input);
+          if(items.length){ window.location.href = href(items[0].url); }
+        });
       }
     });
-  }
-
-  document.addEventListener('DOMContentLoaded', () => {
-    const inputs = document.querySelectorAll('[data-search]');
-    inputs.forEach(bindSearch);
-
-    const params = new URLSearchParams(window.location.search);
+    const params = new URLSearchParams(location.search);
     const q = params.get('q');
-    if(q && inputs[0]){
-      inputs[0].value = q;
-      renderResults(inputs[0]);
-    }
+    if(q && inputs[0]){ inputs[0].value = q; render(inputs[0]); }
   });
 })();
