@@ -1,20 +1,105 @@
+(function(){
+  const DATA = window.NAMES_DATA || [];
 
-const DATA = window.NAMES_DATA || [];
-function localHref(url){
-  if(location.protocol === 'file:' && url && url.startsWith('/')){
-    const css = document.querySelector('link[rel=\"stylesheet\"]');
-    const pref = css ? css.getAttribute('href').replace('assets/css/style.css','') : '';
-    return pref + url.replace(/^\\//,'') + (url.endsWith('/') ? 'index.html' : '');
+  function basePrefix(){
+    const script = document.querySelector('script[src$="assets/js/search.js"], script[src$="search.js"]');
+    const src = script ? script.getAttribute('src') : '';
+    return src.replace(/assets\/js\/search\.js$/, '').replace(/search\.js$/, '');
   }
-  return url;
-}
-function norm(s){return (s||'').toString().toLowerCase().replace(/[‘’ʻ']/g,'').replace(/oʻ|o‘/g,'o').replace(/gʻ|g‘/g,'g').trim()}
-function renderResults(q, targetId){
-  const box=document.getElementById(targetId); if(!box) return;
-  const query=norm(q); box.innerHTML='';
-  if(query.length<1){return;}
-  const items=DATA.filter(x => norm(x.name).includes(query) || norm(x.meaning).includes(query)).slice(0,12);
-  if(!items.length){box.innerHTML='<div class="empty">Mos ism topilmadi.</div>';return;}
-  box.innerHTML=items.map(x=>`<a class="result-item" href="${localHref(x.url)}"><b>${x.name}</b><span>${x.meaning}</span></a>`).join('');
-}
-document.addEventListener('input',e=>{ if(e.target.matches('[data-search]')) renderResults(e.target.value, e.target.dataset.target || 'searchResults'); });
+
+  function localHref(url){
+    if(!url) return '#';
+    const clean = url.replace(/^\/+/, '');
+    return basePrefix() + clean + (clean.endsWith('/') ? 'index.html' : '');
+  }
+
+  function norm(s){
+    return (s || '')
+      .toString()
+      .toLowerCase()
+      .replace(/o[‘’ʻ']/g,'o')
+      .replace(/g[‘’ʻ']/g,'g')
+      .replace(/[‘’ʻ']/g,'')
+      .trim();
+  }
+
+  function filteredData(input){
+    const group = input.dataset.group || '';
+    const religious = input.dataset.religious || '';
+    return DATA.filter(item => {
+      if(group && item.group !== group) return false;
+      if(religious === 'all' && !item.religious) return false;
+      if(religious && religious !== 'all' && item.religious !== religious) return false;
+      return true;
+    });
+  }
+
+  function renderResults(input){
+    const targetId = input.dataset.target || 'searchResults';
+    const box = document.getElementById(targetId);
+    if(!box) return [];
+
+    const query = norm(input.value);
+    box.innerHTML = '';
+    if(query.length < 1){
+      showAllNameLinks();
+      return [];
+    }
+
+    const items = filteredData(input)
+      .filter(x => norm(x.name).includes(query) || norm(x.meaning).includes(query))
+      .slice(0, 20);
+
+    if(!items.length){
+      box.innerHTML = '<div class="empty">Mos ism topilmadi.</div>';
+      filterVisibleNameLinks(query);
+      return [];
+    }
+
+    box.innerHTML = items.map(x =>
+      `<a class="result-item" href="${localHref(x.url)}"><b>${x.name}</b><span>${x.meaning}</span></a>`
+    ).join('');
+    filterVisibleNameLinks(query);
+    return items;
+  }
+
+  function showAllNameLinks(){
+    document.querySelectorAll('.name-link').forEach(link => link.classList.remove('hidden-by-search'));
+  }
+
+  function filterVisibleNameLinks(query){
+    const links = document.querySelectorAll('.name-link');
+    if(!links.length) return;
+    links.forEach(link => {
+      const text = norm(link.textContent);
+      link.classList.toggle('hidden-by-search', !text.includes(query));
+    });
+  }
+
+  function bindSearch(input){
+    ['input','keyup','search','change'].forEach(evt => {
+      input.addEventListener(evt, () => renderResults(input));
+    });
+    input.addEventListener('keydown', e => {
+      if(e.key === 'Enter'){
+        const items = renderResults(input);
+        if(items.length){
+          e.preventDefault();
+          window.location.href = localHref(items[0].url);
+        }
+      }
+    });
+  }
+
+  document.addEventListener('DOMContentLoaded', () => {
+    const inputs = document.querySelectorAll('[data-search]');
+    inputs.forEach(bindSearch);
+
+    const params = new URLSearchParams(window.location.search);
+    const q = params.get('q');
+    if(q && inputs[0]){
+      inputs[0].value = q;
+      renderResults(inputs[0]);
+    }
+  });
+})();
