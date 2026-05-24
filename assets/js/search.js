@@ -73,7 +73,7 @@
       group.dataset.mobileAdsReady = '1';
       const cards = Array.from(group.querySelectorAll(':scope > .category-card'));
       cards.forEach((card, index) => {
-        if(index < cards.length - 1){
+        if(index === 0 && cards.length > 1){
           card.insertAdjacentHTML('afterend', adMarkup('mobile-section-ad', '320x100'));
         }
       });
@@ -86,7 +86,7 @@
       if(links.length < 20) return;
       card.dataset.listAdsReady = '1';
       links.forEach((link, index) => {
-        if((index + 1) % 20 === 0){
+        if((index + 1) % 40 === 0){
           link.insertAdjacentHTML('afterend', adMarkup('list-inline-ad', '320x80'));
         }
       });
