@@ -5,7 +5,6 @@
   function cleanUrl(url){
     let u = String(url || '').replace(/^\/+/, '');
     if(!u) return 'index.html';
-    if(u.endsWith('/')) u += 'index.html';
     return u;
   }
   function href(url){ return base + cleanUrl(url); }

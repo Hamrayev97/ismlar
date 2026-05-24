@@ -7,6 +7,10 @@
   <url><loc>https://example.uz/diniy-ismlar/paygambarlar-ismlari/</loc></url>
   <url><loc>https://example.uz/diniy-ismlar/sahobalar-ismlari/</loc></url>
   <url><loc>https://example.uz/diniy-ismlar/tobeinlar-ismlari/</loc></url>
+  <url><loc>https://example.uz/about/</loc></url>
+  <url><loc>https://example.uz/contact/</loc></url>
+  <url><loc>https://example.uz/privacy/</loc></url>
+  <url><loc>https://example.uz/terms/</loc></url>
   <url><loc>https://example.uz/ismlar/abbos/</loc></url>
   <url><loc>https://example.uz/ismlar/abdulaziz/</loc></url>
   <url><loc>https://example.uz/ismlar/abdulloh/</loc></url>
@@ -65,8 +69,4 @@
   <url><loc>https://example.uz/ismlar/zayd/</loc></url>
   <url><loc>https://example.uz/ismlar/zaynab/</loc></url>
   <url><loc>https://example.uz/ismlar/zulfiya/</loc></url>
-  <url><loc>https://example.uz/about/</loc></url>
-  <url><loc>https://example.uz/contact/</loc></url>
-  <url><loc>https://example.uz/privacy/</loc></url>
-  <url><loc>https://example.uz/terms/</loc></url>
 </urlset>

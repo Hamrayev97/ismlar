@@ -1,0 +1,3 @@
+/ismlar/:slug/index.html  /ism/index.html  200
+/ismlar/:slug/  /ism/index.html  200
+/ismlar/:slug  /ism/index.html  200

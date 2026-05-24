@@ -1,8 +1,22 @@
+// Ism qo‘shish uchun faqat shu ro‘yxatga yangi obyekt qo‘shing.
+// Namuna:
+// {
+//   "name": "Abror",
+//   "meaning": "Yaxshi, solih, ezgu fazilatli inson ma’nosida ishlatiladi.",
+//   "url": "ismlar/abror/",
+//   "group": "ogil-bolalar-ismlari",
+//   "religious": "",
+//   "slug": "abror"
+// },
+//
+// group: "ogil-bolalar-ismlari" yoki "qiz-bolalar-ismlari"
+// religious: diniy bo‘lmasa "", diniy bo‘lsa "paygambarlar-ismlari", "sahobalar-ismlari" yoki "tobeinlar-ismlari"
+
 window.NAMES_DATA = [
   {
     "name": "Abbos",
     "meaning": "Jasur, qat’iyatli, sherday botir inson ma’nosida ishlatiladi.",
-    "url": "ismlar/abbos/index.html",
+    "url": "ismlar/abbos/",
     "group": "ogil-bolalar-ismlari",
     "religious": "",
     "slug": "abbos"
@@ -10,7 +24,7 @@ window.NAMES_DATA = [
   {
     "name": "Abdulaziz",
     "meaning": "Aziz va qudratli Zotning bandasi ma’nosini bildiradi.",
-    "url": "ismlar/abdulaziz/index.html",
+    "url": "ismlar/abdulaziz/",
     "group": "ogil-bolalar-ismlari",
     "religious": "",
     "slug": "abdulaziz"
@@ -18,7 +32,7 @@ window.NAMES_DATA = [
   {
     "name": "Abdulloh",
     "meaning": "Allohning bandasi. Islomiy manbalarda ulug‘ va mazmunli ismlardan biri.",
-    "url": "ismlar/abdulloh/index.html",
+    "url": "ismlar/abdulloh/",
     "group": "ogil-bolalar-ismlari",
     "religious": "sahobalar-ismlari",
     "slug": "abdulloh"
@@ -26,7 +40,7 @@ window.NAMES_DATA = [
   {
     "name": "Abu Bakr",
     "meaning": "Islom tarixidagi mashhur sahoba nomi sifatida keng qo‘llanadi.",
-    "url": "ismlar/abu-bakr/index.html",
+    "url": "ismlar/abu-bakr/",
     "group": "ogil-bolalar-ismlari",
     "religious": "sahobalar-ismlari",
     "slug": "abu-bakr"
@@ -34,7 +48,7 @@ window.NAMES_DATA = [
   {
     "name": "Adiba",
     "meaning": "Odobli, tarbiyali, ilm va adab egasi bo‘lgan qiz ma’nosida ishlatiladi.",
-    "url": "ismlar/adiba/index.html",
+    "url": "ismlar/adiba/",
     "group": "qiz-bolalar-ismlari",
     "religious": "",
     "slug": "adiba"
@@ -42,7 +56,7 @@ window.NAMES_DATA = [
   {
     "name": "Aisha",
     "meaning": "Hayotga to‘la, yashovchi, barhayot ma’nolarini bildiradi.",
-    "url": "ismlar/aisha/index.html",
+    "url": "ismlar/aisha/",
     "group": "qiz-bolalar-ismlari",
     "religious": "",
     "slug": "aisha"
@@ -50,7 +64,7 @@ window.NAMES_DATA = [
   {
     "name": "Akbar",
     "meaning": "Buyuk, ulug‘, katta martabali degan ma’nolarni anglatadi.",
-    "url": "ismlar/akbar/index.html",
+    "url": "ismlar/akbar/",
     "group": "ogil-bolalar-ismlari",
     "religious": "",
     "slug": "akbar"
@@ -58,7 +72,7 @@ window.NAMES_DATA = [
   {
     "name": "Ali",
     "meaning": "Yuksak, oliy, ulug‘ martabali degan ma’nolarni bildiradi.",
-    "url": "ismlar/ali/index.html",
+    "url": "ismlar/ali/",
     "group": "ogil-bolalar-ismlari",
     "religious": "sahobalar-ismlari",
     "slug": "ali"
@@ -66,7 +80,7 @@ window.NAMES_DATA = [
   {
     "name": "Alisher",
     "meaning": "Sherdek mard, jasur va himoyachi inson ma’nosida qo‘llanadi.",
-    "url": "ismlar/alisher/index.html",
+    "url": "ismlar/alisher/",
     "group": "ogil-bolalar-ismlari",
     "religious": "",
     "slug": "alisher"
@@ -74,7 +88,7 @@ window.NAMES_DATA = [
   {
     "name": "Amir",
     "meaning": "Rahbar, boshliq, buyruq beruvchi inson ma’nolarini bildiradi.",
-    "url": "ismlar/amir/index.html",
+    "url": "ismlar/amir/",
     "group": "ogil-bolalar-ismlari",
     "religious": "",
     "slug": "amir"
@@ -82,7 +96,7 @@ window.NAMES_DATA = [
   {
     "name": "Asal",
     "meaning": "Shirin, yoqimli, mehribon inson ma’nosida qo‘llanadi.",
-    "url": "ismlar/asal/index.html",
+    "url": "ismlar/asal/",
     "group": "qiz-bolalar-ismlari",
     "religious": "",
     "slug": "asal"
@@ -90,7 +104,7 @@ window.NAMES_DATA = [
   {
     "name": "Aziz",
     "meaning": "Qadrli, hurmatli, e’zozli inson ma’nosini anglatadi.",
-    "url": "ismlar/aziz/index.html",
+    "url": "ismlar/aziz/",
     "group": "ogil-bolalar-ismlari",
     "religious": "",
     "slug": "aziz"
@@ -98,7 +112,7 @@ window.NAMES_DATA = [
   {
     "name": "Aziza",
     "meaning": "Qadrli, hurmatli, e’zozli qiz ma’nosini bildiradi.",
-    "url": "ismlar/aziza/index.html",
+    "url": "ismlar/aziza/",
     "group": "qiz-bolalar-ismlari",
     "religious": "",
     "slug": "aziza"
@@ -106,7 +120,7 @@ window.NAMES_DATA = [
   {
     "name": "Behruz",
     "meaning": "Baxtli kun, omadli hayot egasi ma’nosida ishlatiladi.",
-    "url": "ismlar/behruz/index.html",
+    "url": "ismlar/behruz/",
     "group": "ogil-bolalar-ismlari",
     "religious": "",
     "slug": "behruz"
@@ -114,7 +128,7 @@ window.NAMES_DATA = [
   {
     "name": "Bilol",
     "meaning": "Suv, namlik, tiriklik belgisi. Islom tarixidagi mashhur sahoba nomi.",
-    "url": "ismlar/bilol/index.html",
+    "url": "ismlar/bilol/",
     "group": "ogil-bolalar-ismlari",
     "religious": "sahobalar-ismlari",
     "slug": "bilol"
@@ -122,7 +136,7 @@ window.NAMES_DATA = [
   {
     "name": "Dilnoza",
     "meaning": "Ko‘ngilni erkalovchi, latofatli, dilga yaqin qiz ma’nosida ishlatiladi.",
-    "url": "ismlar/dilnoza/index.html",
+    "url": "ismlar/dilnoza/",
     "group": "qiz-bolalar-ismlari",
     "religious": "",
     "slug": "dilnoza"
@@ -130,7 +144,7 @@ window.NAMES_DATA = [
   {
     "name": "Diyor",
     "meaning": "Vatan, yurt, maskan ma’nolarini bildiradi.",
-    "url": "ismlar/diyor/index.html",
+    "url": "ismlar/diyor/",
     "group": "ogil-bolalar-ismlari",
     "religious": "",
     "slug": "diyor"
@@ -138,7 +152,7 @@ window.NAMES_DATA = [
   {
     "name": "Durdona",
     "meaning": "Yagona dur, qimmatli va aziz qiz ma’nosini bildiradi.",
-    "url": "ismlar/durdona/index.html",
+    "url": "ismlar/durdona/",
     "group": "qiz-bolalar-ismlari",
     "religious": "",
     "slug": "durdona"
@@ -146,7 +160,7 @@ window.NAMES_DATA = [
   {
     "name": "Farangiz",
     "meaning": "Ko‘rkam, latofatli, e’tibor tortuvchi qiz ma’nosida qo‘llanadi.",
-    "url": "ismlar/farangiz/index.html",
+    "url": "ismlar/farangiz/",
     "group": "qiz-bolalar-ismlari",
     "religious": "",
     "slug": "farangiz"
@@ -154,7 +168,7 @@ window.NAMES_DATA = [
   {
     "name": "Farrux",
     "meaning": "Baxtli, quvonchli, omadli inson ma’nosida ishlatiladi.",
-    "url": "ismlar/farrux/index.html",
+    "url": "ismlar/farrux/",
     "group": "ogil-bolalar-ismlari",
     "religious": "",
     "slug": "farrux"
@@ -162,7 +176,7 @@ window.NAMES_DATA = [
   {
     "name": "Fotima",
     "meaning": "Pokiza va hurmatli qiz ismi; islomiy an’anada ulug‘ ism sifatida qadrlanadi.",
-    "url": "ismlar/fotima/index.html",
+    "url": "ismlar/fotima/",
     "group": "qiz-bolalar-ismlari",
     "religious": "",
     "slug": "fotima"
@@ -170,7 +184,7 @@ window.NAMES_DATA = [
   {
     "name": "Hasan",
     "meaning": "Chiroyli, yaxshi, go‘zal xulqli degan ma’nolarni bildiradi.",
-    "url": "ismlar/hasan/index.html",
+    "url": "ismlar/hasan/",
     "group": "ogil-bolalar-ismlari",
     "religious": "sahobalar-ismlari",
     "slug": "hasan"
@@ -178,7 +192,7 @@ window.NAMES_DATA = [
   {
     "name": "Hasan Basriy",
     "meaning": "Ilm, taqvo va hikmat bilan tanilgan tobein nomi sifatida qo‘llanadi.",
-    "url": "ismlar/hasan-basriy/index.html",
+    "url": "ismlar/hasan-basriy/",
     "group": "ogil-bolalar-ismlari",
     "religious": "tobeinlar-ismlari",
     "slug": "hasan-basriy"
@@ -186,7 +200,7 @@ window.NAMES_DATA = [
   {
     "name": "Husan",
     "meaning": "Husnli, chiroyli, go‘zal xulqli inson ma’nosida talqin qilinadi.",
-    "url": "ismlar/husan/index.html",
+    "url": "ismlar/husan/",
     "group": "ogil-bolalar-ismlari",
     "religious": "",
     "slug": "husan"
@@ -194,7 +208,7 @@ window.NAMES_DATA = [
   {
     "name": "Husayn",
     "meaning": "Go‘zal, chiroyli, yaxshilik sohibi ma’nosida qo‘llanadi.",
-    "url": "ismlar/husayn/index.html",
+    "url": "ismlar/husayn/",
     "group": "ogil-bolalar-ismlari",
     "religious": "sahobalar-ismlari",
     "slug": "husayn"
@@ -202,7 +216,7 @@ window.NAMES_DATA = [
   {
     "name": "Ibrohim",
     "meaning": "Ulug‘ ota, xalqlar otasi ma’nosi bilan bog‘langan payg‘ambar nomi.",
-    "url": "ismlar/ibrohim/index.html",
+    "url": "ismlar/ibrohim/",
     "group": "ogil-bolalar-ismlari",
     "religious": "paygambarlar-ismlari",
     "slug": "ibrohim"
@@ -210,7 +224,7 @@ window.NAMES_DATA = [
   {
     "name": "Ismoil",
     "meaning": "Alloh eshitdi, duo qabul bo‘ldi ma’nosida talqin qilinadi.",
-    "url": "ismlar/ismoil/index.html",
+    "url": "ismlar/ismoil/",
     "group": "ogil-bolalar-ismlari",
     "religious": "paygambarlar-ismlari",
     "slug": "ismoil"
@@ -218,7 +232,7 @@ window.NAMES_DATA = [
   {
     "name": "Iso",
     "meaning": "Allohning payg‘ambari nomi; poklik va mo‘jiza bilan bog‘liq ism.",
-    "url": "ismlar/iso/index.html",
+    "url": "ismlar/iso/",
     "group": "ogil-bolalar-ismlari",
     "religious": "paygambarlar-ismlari",
     "slug": "iso"
@@ -226,7 +240,7 @@ window.NAMES_DATA = [
   {
     "name": "Javohir",
     "meaning": "Qimmatbaho toshlar, dur-javohir kabi aziz inson ma’nosini beradi.",
-    "url": "ismlar/javohir/index.html",
+    "url": "ismlar/javohir/",
     "group": "ogil-bolalar-ismlari",
     "religious": "",
     "slug": "javohir"
@@ -234,7 +248,7 @@ window.NAMES_DATA = [
   {
     "name": "Madina",
     "meaning": "Shahar, xususan Madina shahri nomi bilan bog‘liq muborak ism.",
-    "url": "ismlar/madina/index.html",
+    "url": "ismlar/madina/",
     "group": "qiz-bolalar-ismlari",
     "religious": "",
     "slug": "madina"
@@ -242,7 +256,7 @@ window.NAMES_DATA = [
   {
     "name": "Malika",
     "meaning": "Podshoh qizi, malikadek hurmatli va go‘zal qiz ma’nosini anglatadi.",
-    "url": "ismlar/malika/index.html",
+    "url": "ismlar/malika/",
     "group": "qiz-bolalar-ismlari",
     "religious": "",
     "slug": "malika"
@@ -250,7 +264,7 @@ window.NAMES_DATA = [
   {
     "name": "Marjona",
     "meaning": "Marjon kabi chiroyli, qimmatli va nafis qiz ma’nosini bildiradi.",
-    "url": "ismlar/marjona/index.html",
+    "url": "ismlar/marjona/",
     "group": "qiz-bolalar-ismlari",
     "religious": "",
     "slug": "marjona"
@@ -258,7 +272,7 @@ window.NAMES_DATA = [
   {
     "name": "Maryam",
     "meaning": "Pokiza, ibodatli va hurmatga sazovor ayol ma’nolari bilan talqin qilinadi.",
-    "url": "ismlar/maryam/index.html",
+    "url": "ismlar/maryam/",
     "group": "qiz-bolalar-ismlari",
     "religious": "",
     "slug": "maryam"
@@ -266,7 +280,7 @@ window.NAMES_DATA = [
   {
     "name": "Mohinur",
     "meaning": "Oy nuri, yorqin va go‘zal nur egasi ma’nosida ishlatiladi.",
-    "url": "ismlar/mohinur/index.html",
+    "url": "ismlar/mohinur/",
     "group": "qiz-bolalar-ismlari",
     "religious": "",
     "slug": "mohinur"
@@ -274,7 +288,7 @@ window.NAMES_DATA = [
   {
     "name": "Muhammad",
     "meaning": "Ko‘p maqtalgan, madh etilgan degan ma’noni bildiradi.",
-    "url": "ismlar/muhammad/index.html",
+    "url": "ismlar/muhammad/",
     "group": "ogil-bolalar-ismlari",
     "religious": "paygambarlar-ismlari",
     "slug": "muhammad"
@@ -282,7 +296,7 @@ window.NAMES_DATA = [
   {
     "name": "Murod",
     "meaning": "Orzu, niyat, maqsadga yetish ma’nosini anglatadi.",
-    "url": "ismlar/murod/index.html",
+    "url": "ismlar/murod/",
     "group": "ogil-bolalar-ismlari",
     "religious": "",
     "slug": "murod"
@@ -290,7 +304,7 @@ window.NAMES_DATA = [
   {
     "name": "Muslima",
     "meaning": "Islomga e’tiqod qiluvchi, pokiza va itoatli ayol ma’nosini bildiradi.",
-    "url": "ismlar/muslima/index.html",
+    "url": "ismlar/muslima/",
     "group": "qiz-bolalar-ismlari",
     "religious": "",
     "slug": "muslima"
@@ -298,7 +312,7 @@ window.NAMES_DATA = [
   {
     "name": "Muso",
     "meaning": "Suvdan olingan, najot topgan ma’nolari bilan bog‘langan payg‘ambar nomi.",
-    "url": "ismlar/muso/index.html",
+    "url": "ismlar/muso/",
     "group": "ogil-bolalar-ismlari",
     "religious": "paygambarlar-ismlari",
     "slug": "muso"
@@ -306,7 +320,7 @@ window.NAMES_DATA = [
   {
     "name": "Nilufar",
     "meaning": "Suv guli, nafislik va go‘zallik ramzi bo‘lgan ism.",
-    "url": "ismlar/nilufar/index.html",
+    "url": "ismlar/nilufar/",
     "group": "qiz-bolalar-ismlari",
     "religious": "",
     "slug": "nilufar"
@@ -314,7 +328,7 @@ window.NAMES_DATA = [
   {
     "name": "Nodir",
     "meaning": "Kam uchraydigan, noyob, qimmatli inson ma’nosida ishlatiladi.",
-    "url": "ismlar/nodir/index.html",
+    "url": "ismlar/nodir/",
     "group": "ogil-bolalar-ismlari",
     "religious": "",
     "slug": "nodir"
@@ -322,7 +336,7 @@ window.NAMES_DATA = [
   {
     "name": "Nozima",
     "meaning": "Tartibli, nazmli, didli va nozik tabiatli qiz ma’nosida qo‘llanadi.",
-    "url": "ismlar/nozima/index.html",
+    "url": "ismlar/nozima/",
     "group": "qiz-bolalar-ismlari",
     "religious": "",
     "slug": "nozima"
@@ -330,7 +344,7 @@ window.NAMES_DATA = [
   {
     "name": "Nuh",
     "meaning": "Tinchlik, sabr va najot bilan bog‘langan payg‘ambar nomi.",
-    "url": "ismlar/nuh/index.html",
+    "url": "ismlar/nuh/",
     "group": "ogil-bolalar-ismlari",
     "religious": "paygambarlar-ismlari",
     "slug": "nuh"
@@ -338,7 +352,7 @@ window.NAMES_DATA = [
   {
     "name": "Otabek",
     "meaning": "Hurmatli, ulug‘ bek, oilada tayanch bo‘ladigan inson ma’nosini bildiradi.",
-    "url": "ismlar/otabek/index.html",
+    "url": "ismlar/otabek/",
     "group": "ogil-bolalar-ismlari",
     "religious": "",
     "slug": "otabek"
@@ -346,7 +360,7 @@ window.NAMES_DATA = [
   {
     "name": "Rayhona",
     "meaning": "Rayhon guli, xushbo‘y va yoqimli qiz ma’nosida qo‘llanadi.",
-    "url": "ismlar/rayhona/index.html",
+    "url": "ismlar/rayhona/",
     "group": "qiz-bolalar-ismlari",
     "religious": "",
     "slug": "rayhona"
@@ -354,7 +368,7 @@ window.NAMES_DATA = [
   {
     "name": "Robiya",
     "meaning": "To‘rtinchi, bahoriylik va poklik ma’nolari bilan bog‘liq ism.",
-    "url": "ismlar/robiya/index.html",
+    "url": "ismlar/robiya/",
     "group": "qiz-bolalar-ismlari",
     "religious": "tobeinlar-ismlari",
     "slug": "robiya"
@@ -362,7 +376,7 @@ window.NAMES_DATA = [
   {
     "name": "Sabina",
     "meaning": "Sabrli, vazmin, go‘zal xulqli qiz ma’nosida talqin qilinadi.",
-    "url": "ismlar/sabina/index.html",
+    "url": "ismlar/sabina/",
     "group": "qiz-bolalar-ismlari",
     "religious": "",
     "slug": "sabina"
@@ -370,7 +384,7 @@ window.NAMES_DATA = [
   {
     "name": "Sabrina",
     "meaning": "Sabrli, bardoshli va vazmin qiz ma’nosida talqin qilinadi.",
-    "url": "ismlar/sabrina/index.html",
+    "url": "ismlar/sabrina/",
     "group": "qiz-bolalar-ismlari",
     "religious": "",
     "slug": "sabrina"
@@ -378,7 +392,7 @@ window.NAMES_DATA = [
   {
     "name": "Said ibn Musayyib",
     "meaning": "Ilmli va fazilatli tobeinlardan biri nomi sifatida hurmat bilan tilga olinadi.",
-    "url": "ismlar/said-ibn-musayyib/index.html",
+    "url": "ismlar/said-ibn-musayyib/",
     "group": "ogil-bolalar-ismlari",
     "religious": "tobeinlar-ismlari",
     "slug": "said-ibn-musayyib"
@@ -386,7 +400,7 @@ window.NAMES_DATA = [
   {
     "name": "Sardor",
     "meaning": "Rahbar, yetakchi, boshliq degan ma’nolarni anglatadi.",
-    "url": "ismlar/sardor/index.html",
+    "url": "ismlar/sardor/",
     "group": "ogil-bolalar-ismlari",
     "religious": "",
     "slug": "sardor"
@@ -394,7 +408,7 @@ window.NAMES_DATA = [
   {
     "name": "Sevinch",
     "meaning": "Quvonch, shodlik, oilaga baxt olib kelgan farzand ma’nosini beradi.",
-    "url": "ismlar/sevinch/index.html",
+    "url": "ismlar/sevinch/",
     "group": "qiz-bolalar-ismlari",
     "religious": "",
     "slug": "sevinch"
@@ -402,7 +416,7 @@ window.NAMES_DATA = [
   {
     "name": "Umar",
     "meaning": "Umr, hayot, uzoq yashash ma’nolarini bildiradi; mashhur sahoba nomi.",
-    "url": "ismlar/umar/index.html",
+    "url": "ismlar/umar/",
     "group": "ogil-bolalar-ismlari",
     "religious": "sahobalar-ismlari",
     "slug": "umar"
@@ -410,7 +424,7 @@ window.NAMES_DATA = [
   {
     "name": "Urva ibn Zubayr",
     "meaning": "Ilm, rivoyat va fiqh bilan bog‘liq mashhur tobein nomi.",
-    "url": "ismlar/urva-ibn-zubayr/index.html",
+    "url": "ismlar/urva-ibn-zubayr/",
     "group": "ogil-bolalar-ismlari",
     "religious": "tobeinlar-ismlari",
     "slug": "urva-ibn-zubayr"
@@ -418,7 +432,7 @@ window.NAMES_DATA = [
   {
     "name": "Usmon",
     "meaning": "Tirishqoq, bardoshli ma’nolar bilan talqin qilinadi; mashhur sahoba nomi.",
-    "url": "ismlar/usmon/index.html",
+    "url": "ismlar/usmon/",
     "group": "ogil-bolalar-ismlari",
     "religious": "sahobalar-ismlari",
     "slug": "usmon"
@@ -426,7 +440,7 @@ window.NAMES_DATA = [
   {
     "name": "Yusuf",
     "meaning": "Alloh ziyoda qiladi, chiroy va fazilat sohibi ma’nolarida talqin qilinadi.",
-    "url": "ismlar/yusuf/index.html",
+    "url": "ismlar/yusuf/",
     "group": "ogil-bolalar-ismlari",
     "religious": "paygambarlar-ismlari",
     "slug": "yusuf"
@@ -434,7 +448,7 @@ window.NAMES_DATA = [
   {
     "name": "Zahro",
     "meaning": "Yorqin, oq yuzli, nurli va go‘zal qiz ma’nosida ishlatiladi.",
-    "url": "ismlar/zahro/index.html",
+    "url": "ismlar/zahro/",
     "group": "qiz-bolalar-ismlari",
     "religious": "",
     "slug": "zahro"
@@ -442,7 +456,7 @@ window.NAMES_DATA = [
   {
     "name": "Zayd",
     "meaning": "O‘sish, ko‘payish, baraka ma’nosini bildiradi.",
-    "url": "ismlar/zayd/index.html",
+    "url": "ismlar/zayd/",
     "group": "ogil-bolalar-ismlari",
     "religious": "sahobalar-ismlari",
     "slug": "zayd"
@@ -450,7 +464,7 @@ window.NAMES_DATA = [
   {
     "name": "Zaynab",
     "meaning": "Xushbo‘y daraxt nomi; chiroyli, latofatli ayol ma’nolarida qo‘llanadi.",
-    "url": "ismlar/zaynab/index.html",
+    "url": "ismlar/zaynab/",
     "group": "qiz-bolalar-ismlari",
     "religious": "",
     "slug": "zaynab"
@@ -458,7 +472,7 @@ window.NAMES_DATA = [
   {
     "name": "Zulfiya",
     "meaning": "Sochlari chiroyli, latofatli, ko‘rkam qiz ma’nosini bildiradi.",
-    "url": "ismlar/zulfiya/index.html",
+    "url": "ismlar/zulfiya/",
     "group": "qiz-bolalar-ismlari",
     "religious": "",
     "slug": "zulfiya"
